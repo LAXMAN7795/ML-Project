@@ -40,7 +40,7 @@
 
                     <div class="mb-3">
                         <label class="form-label">Race or Ethnicity</label>
-                        <select class="form-control" name="ethnicity" required>
+                        <select class="form-control" name="race_ethnicity" required>
                             <option selected disabled value>Select your ethnicity</option>
                             <option value="group A">Group A</option>
                             <option value="group B">Group B</option>
@@ -96,12 +96,9 @@
                     </div>
                 </fieldset>
             </form>
-
-            {% if results %}
             <div class="alert alert-info text-center mt-4">
                 <h4>The predicted score is: {{ results }}</h4>
             </div>
-            {% endif %}
         </div>
     </div>
 </body>

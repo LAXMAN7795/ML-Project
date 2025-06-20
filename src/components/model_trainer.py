@@ -1,5 +1,6 @@
 import os
 import sys
+import pandas as pd
 from dataclasses import dataclass
 from src.exception import CustomException
 from src.logger import logging
@@ -49,18 +50,18 @@ class ModelTrainer:
             }
 
             params = {
-                "DecisionTreeRegressor": {
-                    'criterion': ['squared_error', 'friedman_mse', 'absolute_error', 'poisson'],
-                },
                 "RandomForestRegressor": {
                     'n_estimators': [8, 16, 32, 64, 128, 256]
                 },
-                "GradientBoostingRegressor": {
-                    'learning_rate': [.1, .01, .05, .001],
-                    'subsample': [0.6, 0.7, 0.75, 0.8, 0.85, 0.9],
-                    'n_estimators': [8, 16, 32, 64, 128, 256]
+                "DecisionTreeRegressor": {
+                    'criterion': ['squared_error', 'friedman_mse', 'absolute_error', 'poisson'],
                 },
-                "LinearRegression": {},
+                "KNeighborsRegressor": {
+                    'n_neighbors': [3, 5, 7, 9]
+                },
+                "LinearRegression": {
+                    # No hyperparameters to tune
+                },
                 "XGBRegressor": {
                     'learning_rate': [.1, .01, .05, .001],
                     'n_estimators': [8, 16, 32, 64, 128, 256]
@@ -70,15 +71,16 @@ class ModelTrainer:
                     'learning_rate': [0.01, 0.05, 0.1],
                     'iterations': [30, 50, 100]
                 },
+                "GradientBoostingRegressor": {
+                    'learning_rate': [.1, .01, .05, .001],
+                    'subsample': [0.6, 0.7, 0.75, 0.8, 0.85, 0.9],
+                    'n_estimators': [8, 16, 32, 64, 128, 256]
+                },
                 "AdaBoostRegressor": {
                     'learning_rate': [.1, .01, 0.5, .001],
                     'n_estimators': [8, 16, 32, 64, 128, 256]
-                },
-                "KNeighborsRegressor": {
-                    'n_neighbors': [3, 5, 7, 9]
                 }
             }
-
 
             model_report: dict = evaluate_model(X_train=X_train, y_train=y_train, X_test=X_test, y_test=y_test, models=models,param=params)
 
@@ -103,3 +105,7 @@ class ModelTrainer:
 
         except Exception as e:
             raise CustomException(e, sys)
+
+
+
+
