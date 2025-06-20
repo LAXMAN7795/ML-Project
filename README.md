@@ -103,6 +103,8 @@ Users can fill a form with academic details, and the app will predict their math
 Home Page
 ![image alt](https://github.com/LAXMAN7795/Student-Performance-Prediction-Using-Machine-Learning/blob/da3a2e974b4eccd482d4ce71b75f777aef53f191/templates/HomePage.png)
 
+Prediction Page
+![image alt](https://github.com/LAXMAN7795/Student-Performance-Prediction-Using-Machine-Learning/blob/050c6184086dabe77d3362a42830f06b004f5266/templates/InputPage.png)
 
 👤 Author
 Name: Laxman Gouda
