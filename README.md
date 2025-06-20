@@ -107,7 +107,7 @@ Prediction Page
 ![image alt](https://github.com/LAXMAN7795/Student-Performance-Prediction-Using-Machine-Learning/blob/050c6184086dabe77d3362a42830f06b004f5266/templates/InputPage.png)
 
 Result Page
-![image alt](https://github.com/LAXMAN7795/Student-Performance-Prediction-Using-MachineLearning/blob/02353c3307311f403396f9d51ad3307b70974020/templates/PredictionPage.png)
+![image alt](https://github.com/LAXMAN7795/Student-Performance-Prediction-Using-Machine-Learning/blob/b88af60d0c1868d411a5b3a211189c578838ded7/templates/PredictionPage.png)
 👤 Author
 Name: Laxman Gouda
 Email: laxman.sg0104@gmail.com
